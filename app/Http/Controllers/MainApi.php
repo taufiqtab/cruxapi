@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pengguna;
 class MainApi extends Controller
 {
     /**
@@ -21,6 +22,13 @@ class MainApi extends Controller
         $data[0]['umur'] = 10;
         $data[1]['nama'] = "opet";
         $data[1]['umur'] = 12;
+
+        return response()->json($data);
+    }
+
+    public function getUsers()
+    {
+        $data = Pengguna::All();
 
         return response()->json($data);
     }

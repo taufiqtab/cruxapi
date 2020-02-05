@@ -17,5 +17,7 @@ $router->get('/', function () use ($router) {
 
 
 $router->get('/userid/{id}', 'MainApi@show');
-$router->get('/user', 'MainApi@show');
+$router->get('/show', 'MainApi@show');
+$router->get('/user', 'MainApi@getUsers');
+
 
